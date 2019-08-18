@@ -49,3 +49,6 @@
   service: name=docker state=restarted enabled=yes daemon_reload=yes
   when: daemon_settings.changed or proxy_settings.changed
 
+- name: Install python docker package with pip
+  pip:
+    name: docker
